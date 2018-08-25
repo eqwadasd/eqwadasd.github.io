@@ -6,18 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Someone&#39;s blog</title>
+  <title>msf_3.1外围信息收集 | Someone&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog that just got started">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Someone&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="通过DNS和IP地址挖掘目标网络信息">
+<meta name="keywords" content="第三章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="msf_3.1外围信息收集">
+<meta property="og:url" content="http://yoursite.com/2018/08/24/3-1外围信息收集/index.html">
 <meta property="og:site_name" content="Someone&#39;s blog">
-<meta property="og:description" content="A blog that just got started">
+<meta property="og:description" content="通过DNS和IP地址挖掘目标网络信息">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片1.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片2.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片3.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片4.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片5.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片6.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片7.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片7.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片8.jpg">
+<meta property="og:image" content="http://yoursite.com/img/msf3.1/图片9.jpg">
+<meta property="og:updated_time" content="2018-08-24T14:03:39.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Someone&#39;s blog">
-<meta name="twitter:description" content="A blog that just got started">
+<meta name="twitter:title" content="msf_3.1外围信息收集">
+<meta name="twitter:description" content="通过DNS和IP地址挖掘目标网络信息">
+<meta name="twitter:image" content="http://yoursite.com/img/msf3.1/图片1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Someone&#39;s blog" type="application/atom+xml">
   
@@ -145,16 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-3-1外围信息收集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-3-1外围信息收集" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/24/3-1外围信息收集/">msf_3.1外围信息收集</a>
+    <h1 class="article-title" itemprop="name">
+      msf_3.1外围信息收集
     </h1>
   
 
@@ -167,10 +178,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="通过DNS和IP地址挖掘目标网络信息"><a href="#通过DNS和IP地址挖掘目标网络信息" class="headerlink" title="通过DNS和IP地址挖掘目标网络信息"></a>通过DNS和IP地址挖掘目标网络信息</h2>
-        
+        <h2 id="通过DNS和IP地址挖掘目标网络信息"><a href="#通过DNS和IP地址挖掘目标网络信息" class="headerlink" title="通过DNS和IP地址挖掘目标网络信息"></a>通过DNS和IP地址挖掘目标网络信息</h2><a id="more"></a>
+<h3 id="外围收集技术（公开渠道信息收集）："><a href="#外围收集技术（公开渠道信息收集）：" class="headerlink" title="外围收集技术（公开渠道信息收集）："></a>外围收集技术（公开渠道信息收集）：</h3><h4 id="定义：不接触到实际测试目标，而利用正常用户访问途径所实施的信息搜集技术。"><a href="#定义：不接触到实际测试目标，而利用正常用户访问途径所实施的信息搜集技术。" class="headerlink" title="定义：不接触到实际测试目标，而利用正常用户访问途径所实施的信息搜集技术。"></a>定义：不接触到实际测试目标，而利用正常用户访问途径所实施的信息搜集技术。</h4><h4 id="确定测试范围：唯一门户网站（该机构内部的所有与网站连接的设备）-网站群的子网站（该网站相关的资产）"><a href="#确定测试范围：唯一门户网站（该机构内部的所有与网站连接的设备）-网站群的子网站（该网站相关的资产）" class="headerlink" title="确定测试范围：唯一门户网站（该机构内部的所有与网站连接的设备）/网站群的子网站（该网站相关的资产）"></a>确定测试范围：唯一门户网站（该机构内部的所有与网站连接的设备）/网站群的子网站（该网站相关的资产）</h4><h4 id="自动化工具：扫描器-metasploit的AUxiliary-moudule（辅助模块）"><a href="#自动化工具：扫描器-metasploit的AUxiliary-moudule（辅助模块）" class="headerlink" title="自动化工具：扫描器 metasploit的AUxiliary moudule（辅助模块）"></a>自动化工具：扫描器 metasploit的AUxiliary moudule（辅助模块）</h4><h3 id="1-whois域名注册信息查询："><a href="#1-whois域名注册信息查询：" class="headerlink" title="1.whois域名注册信息查询："></a>1.whois域名注册信息查询：</h3><h4 id="信息包括（域名所有者、服务商、管理员邮件地址、域名注册日期、过期日期…）"><a href="#信息包括（域名所有者、服务商、管理员邮件地址、域名注册日期、过期日期…）" class="headerlink" title="信息包括（域名所有者、服务商、管理员邮件地址、域名注册日期、过期日期…）"></a>信息包括（域名所有者、服务商、管理员邮件地址、域名注册日期、过期日期…）</h4><h4 id="利用whois的查询时去掉www、tfp等前缀"><a href="#利用whois的查询时去掉www、tfp等前缀" class="headerlink" title="利用whois的查询时去掉www、tfp等前缀"></a>利用whois的查询时去掉www、tfp等前缀</h4><h4 id="利用卡里的查询结果"><a href="#利用卡里的查询结果" class="headerlink" title="利用卡里的查询结果"></a>利用卡里的查询结果</h4><p><img src="\img\msf3.1\图片1.jpg" alt="图片"></p>
+<h4 id="and"><a href="#and" class="headerlink" title="and"></a>and</h4><p><img src="\img\msf3.1\图片2.jpg" alt="图片"></p>
+<h3 id="2-nslookup与dig查询"><a href="#2-nslookup与dig查询" class="headerlink" title="2.nslookup与dig查询"></a>2.nslookup与dig查询</h3><h4 id="查询指定域名所对应的IP地址"><a href="#查询指定域名所对应的IP地址" class="headerlink" title="查询指定域名所对应的IP地址"></a>查询指定域名所对应的IP地址</h4><h4 id="Dig工具：从该域名的官方服务器查询到精确的权威解答"><a href="#Dig工具：从该域名的官方服务器查询到精确的权威解答" class="headerlink" title="Dig工具：从该域名的官方服务器查询到精确的权威解答"></a>Dig工具：从该域名的官方服务器查询到精确的权威解答</h4><h4 id="nslookup工具：DNS解析服务器保存在Cache中的为权威解答。"><a href="#nslookup工具：DNS解析服务器保存在Cache中的为权威解答。" class="headerlink" title="nslookup工具：DNS解析服务器保存在Cache中的为权威解答。"></a>nslookup工具：DNS解析服务器保存在Cache中的为权威解答。</h4><h4 id="nslookup："><a href="#nslookup：" class="headerlink" title="nslookup："></a>nslookup：</h4><p><img src="\img\msf3.1\图片3.jpg" alt="图片"></p>
+<h4 id="设置type为MX来查找其邮件转发-Mail-Exchange-服务器"><a href="#设置type为MX来查找其邮件转发-Mail-Exchange-服务器" class="headerlink" title="设置type为MX来查找其邮件转发(Mail Exchange)服务器"></a>设置type为MX来查找其邮件转发(Mail Exchange)服务器</h4><h4 id="DNS开放了区域传送-可以使用ls-d-example-com-命令查询所有的dns记录。"><a href="#DNS开放了区域传送-可以使用ls-d-example-com-命令查询所有的dns记录。" class="headerlink" title="DNS开放了区域传送 可以使用ls -d example.com 命令查询所有的dns记录。"></a>DNS开放了区域传送 可以使用ls -d example.com 命令查询所有的dns记录。</h4><h4 id="Dig：可以指定使用哪台DNS解析服务器进行查询"><a href="#Dig：可以指定使用哪台DNS解析服务器进行查询" class="headerlink" title="Dig：可以指定使用哪台DNS解析服务器进行查询"></a>Dig：可以指定使用哪台DNS解析服务器进行查询</h4><h4 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h4><h4 id="Dig-lt-DNS服务器（可以加A、NS、MX来查询特定内容的DNS记录）-gt-lt-带查询的域名-gt"><a href="#Dig-lt-DNS服务器（可以加A、NS、MX来查询特定内容的DNS记录）-gt-lt-带查询的域名-gt" class="headerlink" title="Dig @&lt;DNS服务器（可以加A、NS、MX来查询特定内容的DNS记录）&gt;&lt;带查询的域名&gt;"></a>Dig @&lt;DNS服务器（可以加A、NS、MX来查询特定内容的DNS记录）&gt;&lt;带查询的域名&gt;</h4><p><img src="\img\msf3.1\图片4.jpg" alt="图片"></p>
+<h4 id="可以直接加域名-不用dns服务器-书上给的dns服务器拒绝递归。"><a href="#可以直接加域名-不用dns服务器-书上给的dns服务器拒绝递归。" class="headerlink" title="可以直接加域名 不用dns服务器 书上给的dns服务器拒绝递归。"></a>可以直接加域名 不用dns服务器 书上给的dns服务器拒绝递归。</h4><h3 id="3-IP2Location地理位置查询"><a href="#3-IP2Location地理位置查询" class="headerlink" title="3.IP2Location地理位置查询"></a>3.IP2Location地理位置查询</h3><h4 id="地理位置信息可能会暴露关于目标更加私密的信息，比如确定目标主机是某公司资产的一部分还是个人资产。"><a href="#地理位置信息可能会暴露关于目标更加私密的信息，比如确定目标主机是某公司资产的一部分还是个人资产。" class="headerlink" title="地理位置信息可能会暴露关于目标更加私密的信息，比如确定目标主机是某公司资产的一部分还是个人资产。"></a>地理位置信息可能会暴露关于目标更加私密的信息，比如确定目标主机是某公司资产的一部分还是个人资产。</h4><h4 id="Ip地理位置服务：maxmind-com"><a href="#Ip地理位置服务：maxmind-com" class="headerlink" title="Ip地理位置服务：maxmind.com"></a>Ip地理位置服务：maxmind.com</h4><h4 id="详细的地理信息："><a href="#详细的地理信息：" class="headerlink" title="详细的地理信息："></a>详细的地理信息：</h4><h4 id="国外-利用提供的经纬度-google-map"><a href="#国外-利用提供的经纬度-google-map" class="headerlink" title="国外 利用提供的经纬度 google map"></a>国外 利用提供的经纬度 google map</h4><h4 id="国内-qq纯真数据库"><a href="#国内-qq纯真数据库" class="headerlink" title="国内 qq纯真数据库"></a>国内 qq纯真数据库</h4><p><img src="\img\msf3.1\图片5.jpg" alt="图片"></p>
+<h3 id="4-netcrsft网站提供的信息查询服务。"><a href="#4-netcrsft网站提供的信息查询服务。" class="headerlink" title="4.netcrsft网站提供的信息查询服务。"></a>4.netcrsft网站提供的信息查询服务。</h3><h4 id="将子域名枚举出来，对于了解网站的总体架构、业务应用等非常有帮助。"><a href="#将子域名枚举出来，对于了解网站的总体架构、业务应用等非常有帮助。" class="headerlink" title="将子域名枚举出来，对于了解网站的总体架构、业务应用等非常有帮助。"></a>将子域名枚举出来，对于了解网站的总体架构、业务应用等非常有帮助。</h4><h4 id="网址-http-searchdns-netcraft-com"><a href="#网址-http-searchdns-netcraft-com" class="headerlink" title="网址:http://searchdns.netcraft.com/"></a>网址:<a href="http://searchdns.netcraft.com/" target="_blank" rel="noopener">http://searchdns.netcraft.com/</a></h4><p><img src="\img\msf3.1\图片6.jpg" alt="图片"></p>
+<h4 id="还可以获取更详细的信息-网址-toolbar-netcraft-com-site-report-url"><a href="#还可以获取更详细的信息-网址-toolbar-netcraft-com-site-report-url" class="headerlink" title="还可以获取更详细的信息  网址:toolbar.netcraft.com/site_report?url=?"></a>还可以获取更详细的信息  网址:toolbar.netcraft.com/site_report?url=?</h4><p><img src="\img\msf3.1\图片7.jpg" alt="图片"></p>
+<h3 id="5-ip2Domain反查域名"><a href="#5-ip2Domain反查域名" class="headerlink" title="5.ip2Domain反查域名"></a>5.ip2Domain反查域名</h3><h4 id="渗透目标网站是一台虚拟主机，一台物理机服务器上可以运行多个虚拟主机，虚拟主机具有不同的域名，但用一个IP地址。可以通过该服务器的其他的网站的漏洞获取服务器控制权。"><a href="#渗透目标网站是一台虚拟主机，一台物理机服务器上可以运行多个虚拟主机，虚拟主机具有不同的域名，但用一个IP地址。可以通过该服务器的其他的网站的漏洞获取服务器控制权。" class="headerlink" title="渗透目标网站是一台虚拟主机，一台物理机服务器上可以运行多个虚拟主机，虚拟主机具有不同的域名，但用一个IP地址。可以通过该服务器的其他的网站的漏洞获取服务器控制权。"></a>渗透目标网站是一台虚拟主机，一台物理机服务器上可以运行多个虚拟主机，虚拟主机具有不同的域名，但用一个IP地址。可以通过该服务器的其他的网站的漏洞获取服务器控制权。</h4><h4 id="查询网址-https-www-ipaddress-com-reverse-ip"><a href="#查询网址-https-www-ipaddress-com-reverse-ip" class="headerlink" title="查询网址:https://www.ipaddress.com/reverse-ip/"></a>查询网址:<a href="https://www.ipaddress.com/reverse-ip/" target="_blank" rel="noopener">https://www.ipaddress.com/reverse-ip/</a></h4><h4 id="国内-http-www-7c-com"><a href="#国内-http-www-7c-com" class="headerlink" title="国内:http://www.7c.com/"></a>国内:<a href="http://www.7c.com/" target="_blank" rel="noopener">http://www.7c.com/</a></h4><p><img src="\img\msf3.1\图片7.jpg" alt="图片"></p>
+<h2 id="通过搜索引擎进行信息收集"><a href="#通过搜索引擎进行信息收集" class="headerlink" title="通过搜索引擎进行信息收集"></a>通过搜索引擎进行信息收集</h2><h3 id="1-Google-Hacking技术"><a href="#1-Google-Hacking技术" class="headerlink" title="1.Google Hacking技术"></a>1.Google Hacking技术</h3><h4 id="GHDB-google-黑客数据库-附带网址-lt-看不懂系列-gt"><a href="#GHDB-google-黑客数据库-附带网址-lt-看不懂系列-gt" class="headerlink" title="GHDB(google 黑客数据库) 附带网址&lt;看不懂系列&gt;"></a>GHDB(google 黑客数据库) <a href="http://www.exploit-db.com/google-dorks" target="_blank" rel="noopener">附带网址&lt;看不懂系列&gt;</a></h4><h4 id="工具-SiteDigger、search-digger。"><a href="#工具-SiteDigger、search-digger。" class="headerlink" title="工具 SiteDigger、search digger。"></a>工具 SiteDigger、search digger。</h4><h3 id="2-搜索网站的目录结构"><a href="#2-搜索网站的目录结构" class="headerlink" title="2.搜索网站的目录结构"></a>2.搜索网站的目录结构</h3><h4 id="一些程序员喜欢将后台管理目录命名为一些常见的名字：admin、login、cms-。"><a href="#一些程序员喜欢将后台管理目录命名为一些常见的名字：admin、login、cms-。" class="headerlink" title="一些程序员喜欢将后台管理目录命名为一些常见的名字：admin、login、cms 。"></a>一些程序员喜欢将后台管理目录命名为一些常见的名字：admin、login、cms 。</h4><h4 id="Google中输入-parent-directory-size-网址。"><a href="#Google中输入-parent-directory-size-网址。" class="headerlink" title="Google中输入 parent directory size:网址。"></a>Google中输入 parent directory size:网址。</h4><h4 id="扩展名："><a href="#扩展名：" class="headerlink" title="扩展名："></a>扩展名：</h4><h4 id="inc-可能包含网站的配置信息，如数据库用户名-口令"><a href="#inc-可能包含网站的配置信息，如数据库用户名-口令" class="headerlink" title=".inc 可能包含网站的配置信息，如数据库用户名/口令"></a>.inc 可能包含网站的配置信息，如数据库用户名/口令</h4><h4 id="bak-通常编译源代码留下来的备份文件，求得程序脚本文件中的大部分内容。"><a href="#bak-通常编译源代码留下来的备份文件，求得程序脚本文件中的大部分内容。" class="headerlink" title=".bak 通常编译源代码留下来的备份文件，求得程序脚本文件中的大部分内容。"></a>.bak 通常编译源代码留下来的备份文件，求得程序脚本文件中的大部分内容。</h4><h4 id="txt-sql-网站运行的SQL脚本，可能会透露类似数据库结构等信息。"><a href="#txt-sql-网站运行的SQL脚本，可能会透露类似数据库结构等信息。" class="headerlink" title=".txt .sql 网站运行的SQL脚本，可能会透露类似数据库结构等信息。"></a>.txt .sql 网站运行的SQL脚本，可能会透露类似数据库结构等信息。</h4><h4 id="Tips-robots-txt-告诉浏览器那些目录和文件不应该被抓取，渗透测试重点关注。"><a href="#Tips-robots-txt-告诉浏览器那些目录和文件不应该被抓取，渗透测试重点关注。" class="headerlink" title="Tips: robots.txt 告诉浏览器那些目录和文件不应该被抓取，渗透测试重点关注。"></a>Tips: robots.txt 告诉浏览器那些目录和文件不应该被抓取，渗透测试重点关注。</h4><h3 id="3-搜索特定类型的文件："><a href="#3-搜索特定类型的文件：" class="headerlink" title="3.搜索特定类型的文件："></a>3.搜索特定类型的文件：</h3><h4 id="网站管理员为了方便往往会将类似通信录、订单等内容敏感的文件连接到网上，可以在Google上针对此文件进行查找。"><a href="#网站管理员为了方便往往会将类似通信录、订单等内容敏感的文件连接到网上，可以在Google上针对此文件进行查找。" class="headerlink" title="网站管理员为了方便往往会将类似通信录、订单等内容敏感的文件连接到网上，可以在Google上针对此文件进行查找。"></a>网站管理员为了方便往往会将类似通信录、订单等内容敏感的文件连接到网上，可以在Google上针对此文件进行查找。</h4><h4 id="Google中输入-site-网址-filetype-xls-文件类型-。"><a href="#Google中输入-site-网址-filetype-xls-文件类型-。" class="headerlink" title="Google中输入 site:网址 filetype:xls(文件类型)。"></a>Google中输入 site:网址 filetype:xls(文件类型)。</h4><h3 id="4-搜索文件的email地址"><a href="#4-搜索文件的email地址" class="headerlink" title="4.搜索文件的email地址"></a>4.搜索文件的email地址</h3><h4 id="可以使用metasploit中的search-email-collector-进行有针对性的邮箱地址搜索。"><a href="#可以使用metasploit中的search-email-collector-进行有针对性的邮箱地址搜索。" class="headerlink" title="可以使用metasploit中的search_email_collector,进行有针对性的邮箱地址搜索。"></a>可以使用metasploit中的search_email_collector,进行有针对性的邮箱地址搜索。</h4><h4 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h4><h5 id="1-利用模块：use-auxiliary-gather-search-email-collector"><a href="#1-利用模块：use-auxiliary-gather-search-email-collector" class="headerlink" title="1.利用模块：use  auxiliary/gather/search_email_collector"></a>1.利用模块：use  auxiliary/gather/search_email_collector</h5><h5 id="2-Set-Domain-set-后缀"><a href="#2-Set-Domain-set-后缀" class="headerlink" title="2.Set Domain   set 后缀"></a>2.Set Domain   set 后缀</h5><h5 id="3-Run"><a href="#3-Run" class="headerlink" title="3.Run"></a>3.Run</h5><p><img src="\img\msf3.1\图片8.jpg" alt="图片"></p>
+<h3 id="5-搜索易存在sql注入点的界面。"><a href="#5-搜索易存在sql注入点的界面。" class="headerlink" title="5.搜索易存在sql注入点的界面。"></a>5.搜索易存在sql注入点的界面。</h3><h4 id="使用Google可以筛选出网站中容易出现SQL注入漏洞的页面。"><a href="#使用Google可以筛选出网站中容易出现SQL注入漏洞的页面。" class="headerlink" title="使用Google可以筛选出网站中容易出现SQL注入漏洞的页面。"></a>使用Google可以筛选出网站中容易出现SQL注入漏洞的页面。</h4><h4 id="Site-网址testfire-net-inurl-login-关键字-得到后台登陆的URL"><a href="#Site-网址testfire-net-inurl-login-关键字-得到后台登陆的URL" class="headerlink" title="Site: 网址testfire.net inurl:login(关键字)//得到后台登陆的URL"></a>Site: 网址testfire.net inurl:login(关键字)//得到后台登陆的URL</h4><p><img src="\img\msf3.1\图片9.jpg" alt="图片"></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>扫扫更健康<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -201,16 +248,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/24/3-1外围信息收集/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/24/3-1外围信息收集/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/20/msf_1.1第一次使用metasploit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1.1第一次使用metasploit</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,263 +336,14 @@
 
 
 
-
   
-    <article id="post-msf_1.1第一次使用metasploit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/20/msf_1.1第一次使用metasploit/">1.1第一次使用metasploit</a>
-    </h1>
   
 
-        
-        <a href="/2018/08/20/msf_1.1第一次使用metasploit/" class="archive-article-date">
-  	<time datetime="2018-08-20T02:46:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第一章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/渗透测试魔鬼训练营//" class="article-tag-list-link color5">渗透测试魔鬼训练营</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/20/msf_1.1第一次使用metasploit/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cve—-2017-11882漏洞的复现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/10/cve—-2017-11882漏洞的复现/">cve-2017-11882漏洞的复现</a>
-    </h1>
   
 
-        
-        <a href="/2018/08/10/cve—-2017-11882漏洞的复现/" class="archive-article-date">
-  	<time datetime="2018-08-10T10:16:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="材料和工具简介"><a href="#材料和工具简介" class="headerlink" title="材料和工具简介"></a>材料和工具简介</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工程实践</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CVE系列//" class="article-tag-list-link color1">CVE系列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/10/cve—-2017-11882漏洞的复现/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-one" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/05/one/">one</a>
-    </h1>
   
 
-        
-        <a href="/2018/08/05/one/" class="archive-article-date">
-  	<time datetime="2018-08-05T11:32:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">提前谢谢金主</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/机（bai）灵（chi）系列//" class="article-tag-list-link color5">机（bai）灵（chi）系列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/05/one/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -509,8 +366,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
