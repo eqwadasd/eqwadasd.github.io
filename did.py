@@ -1,2 +1,1 @@
- import shutil
-shutil.move("../bin/robot.jsp", "../confluence/images")
+'")<img src=x onerror=alert(1)>
